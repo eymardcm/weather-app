@@ -27,7 +27,7 @@ app.get('', (req, res) => {
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    title: 'Weather App Help Page',
+    title: 'Help',
     message: "I'm here to help!",
     name: 'Chad Eymard'
   });
@@ -35,7 +35,7 @@ app.get('/help', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'Weather App About Page',
+    title: 'About',
     message: 'Here is everything you ever wanted to know about me.',
     name: 'Chad Eymard'
   });
@@ -88,7 +88,7 @@ app.get('/help/*', (req, res) => {
 
 app.get('*', (req, res) => {
   res.render('error', {
-    title: 'Error page',
+    title: 'Error',
     message: '404 - Not found',
     name: 'Chad Eymard'
   });
