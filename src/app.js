@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const app = express();
-const PORT = '3000';
+const PORT = process.env.PORT || 3000;
 
 const hbs = require('hbs');
 
@@ -48,12 +48,7 @@ app.get('/weather', (req, res) => {
       error: 'You must provide searchText.'
     });
   }
-  // const msg = {
-  //   Mmssage: 'Weather page',
-  //   location: searchText,
-  //   temperture: 'It is 78 degrees.'
-  // };
-
+  
   utils.getCoordinates(searchText, (error, coords) => {
     if (error) {
       return res.send({

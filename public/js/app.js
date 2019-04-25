@@ -1,16 +1,13 @@
 const getForecast = search => {
-  const baseurl = 'http://localhost:3000/weather?search=';
+  const baseurl = '/weather?search=';
   const searchText = search;
   const url = `${baseurl}${searchText}`;
 
   fetch(url).then(res => {
     res.json().then(data => {
       if (data.error) {
-        // console.log(data.error);
         return (message1.textContent = data.error);
       }
-      // console.log(data);
-      // console.log('Here', data.location)
       message1.textContent = data.location;
       message2.textContent = data.summary;
     });
