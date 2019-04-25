@@ -25,8 +25,8 @@ const message1 = document.querySelector('#message-1');
 const message2 = document.querySelector('#message-2');
 
 const clearMessage = () => {
-  message1.textContent = '';
-  message2.textContent = '';
+  message1.textContent = ''
+  message2.textContent = ''
 };
 
 const loadingMessage = () => {
@@ -39,7 +39,7 @@ weatherForm.addEventListener('submit', e => {
   clearMessage();
 
   loadingMessage();
-  
+
   e.preventDefault();
   searchTextValue = searchTextBox.value;
 
